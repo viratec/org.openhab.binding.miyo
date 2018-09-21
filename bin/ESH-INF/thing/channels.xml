@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="viratec"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+                          xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+    <!--Channels für ViraCube-->
+    
+    <!-- Bewässerung einschalten Channel Type-->
+    <channel-type id="irrigation-channel">
+        <item-type>Switch</item-type>
+        <label>Aktivieren der Bewässerung</label>
+        <category>switch</category>
+        <description>Dieser Channel bewässert den asugewählten Bewässerungsbereich<description>
+    </channel-type>
+    
+    <!-- Statusabfrage Channel Type-->
+    <channel-type id="status-channel">
+        <item-type>String</item-type>
+        <label>Statusabfrage zu ausgewähltem Bewässerungsabschnitt</label>
+        <category>Humidity</category>
+        <state readOnly="true"></state>
+        <description>Dieser Channel liefert Informationen über den ausgewählten Bewässerungsbereich</description>
+    </channel-type>
+
+
+
+</thing:thing-descriptions>    

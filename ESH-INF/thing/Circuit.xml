@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="miyo"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+                          xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+    
+
+ <!-- Bewässerungskreis Thing Type-->
+    <thing-type id="circuit">
+        <supported-bridge-type-refs>
+            <bridge-type-ref id="bridge" />
+        </supported-bridge-type-refs>
+        <label>Circuit</label>
+        <description> Provides various data about the garden</description>
+        <channels>
+            <channel id = "setIrrigation" typeId = "irrigation-channel"/>
+            <channel id = "getBorderbottom" typeId ="borderbottom-channel"/>
+            <channel id = "getBordertop" typeId = "bordertop-channel"/> 
+            <channel id = "getIrrigationStart" typeId = "irrigationStart-channel"/>
+            <channel id = "getIrrigationEnd" typeId = "irrigationEnd-channel"/>
+            <channel id = "setWintermode" typeId = "winter-channel"/>
+            <channel id = "getHumidity" typeId="humidity-channel"/>
+            <channel id = "getBrightness" typeId="brightness-channel"/>
+            <channel id = "getTemperature" typeId="temperature-channel"/>
+            <channel id = "getConsiderMower" typeId="considerMower-channel"/>
+            <channel id = "getExternBlock" typeId="externBlock-channel"/>
+        </channels>
+     </thing-type>
+     
+</thing:thing-descriptions>

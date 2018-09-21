@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<binding:binding id="miyo"
+				 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				 xmlns:binding="http://eclipse.org/smarthome/schemas/binding/v1.0.0"
+				 xsi:schemaLocation="http://eclipse.org/smarthome/schemas/binding/v1.0.0 http://eclipse.org/smarthome/schemas/binding-1.0.0.xsd">
+
+	<name>MIYO Binding</name>
+	<description>This is the binding for MIYO. It supports your MIYO equipment in your Smart Garden and let's you control your garden from openHAB.</description>
+	<author>MIYO</author>
+	
+	
+
+</binding:binding>

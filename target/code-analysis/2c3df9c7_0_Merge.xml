@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><sca xmlns:functx="http://www.functx.com">
+   <file name=".binding.viratec\.classpath">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+
+
+
+   <file name=".binding.viratec\ESH-INF\i18n\viratec_xx_XX.properties">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name=".binding.viratec\ESH-INF\thing\channels.xml">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name=".binding.viratec\ESH-INF\thing\Circuit.xml">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+      <message tool="checkstyle" line="18" message="Invalid content was found starting with element channel-groups. One of {properties, representation-property, config-description, config-description-ref} is expected." priority="1" rule="EshInfXmlValidationCheck" category="style"/>
+   </file>
+   <file name=".binding.viratec\ESH-INF\thing\ViraCube.xml">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name=".binding.viratec\META-INF\MANIFEST.MF">
+      <message tool="checkstyle" line="14" message="The version of the package com.google.gson should not be specified" priority="2" rule="ManifestPackageVersionCheck" category="style"/>
+      <message tool="checkstyle" line="15" message="The version of the package com.google.gson.reflect should not be specified" priority="2" rule="ManifestPackageVersionCheck" category="style"/>
+      <message tool="checkstyle" line="16" message="The version of the package org.apache.commons.io should not be specified" priority="2" rule="ManifestPackageVersionCheck" category="style"/>
+      <message tool="checkstyle" line="17" message="The version of the package org.apache.commons.lang.exception should not be specified" priority="2" rule="ManifestPackageVersionCheck" category="style"/>
+      <message tool="checkstyle" line="31" message="The version of the package org.osgi.framework should not be specified" priority="2" rule="ManifestPackageVersionCheck" category="style"/>
+   </file>
+   <file name=".binding.viratec\OSGI-INF\.gitignore">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name=".binding.viratec.internal.ViraTecHandlerFactory.xml">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+
+   <file name=".binding.viratec\README.md">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.handler.CircuitStatusListener.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.handler.ViraCubeHandler.java">
+      <message tool="findbugs" line="184" message="Self comparison of org.eclipse.smarthome.core.library.types.OnOffType.ON with itself in org.openhab.binding.viratec.handler.ViraCubeHandler.updateCircuitState(Circuit, StateUpdate)" priority="2" rule="Self comparison of field with itself (SA)" category="correctness" rule_id="SA_FIELD_SELF_COMPARISON"/>
+   <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+      <message tool="checkstyle" line="65" message="Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." priority="3" rule="ModifierOrderCheck" category="style"/>
+      <message tool="checkstyle" line="197" message="Remove empty line before closing brace" priority="3" rule="NoEmptyLineSeparatorCheck" category="style"/>
+      <message tool="checkstyle" line="245" message="Remove empty line before closing brace" priority="3" rule="NoEmptyLineSeparatorCheck" category="style"/>
+      <message tool="checkstyle" line="274" message="Remove empty line before closing brace" priority="3" rule="NoEmptyLineSeparatorCheck" category="style"/>
+   </file>
+<file name="org.openhab.binding.viratec.handler.ViraTecHandler.java">
+      <message tool="checkstyle" line="51" message="Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." priority="3" rule="ModifierOrderCheck" category="style"/>
+      <message tool="checkstyle" line="226" message="Remove empty line before closing brace" priority="3" rule="NoEmptyLineSeparatorCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.Circuit.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+      <message tool="checkstyle" line="28" message="Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." priority="3" rule="ModifierOrderCheck" category="style"/>
+      <message tool="checkstyle" line="28" message="Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'." priority="3" rule="ConstantNameCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.Command.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.Config.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.discovery.CircuitDiscoveryService.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+      <message tool="checkstyle" line="43" message="Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." priority="3" rule="ModifierOrderCheck" category="style"/>
+      <message tool="checkstyle" line="101" message="Remove empty line before closing brace" priority="3" rule="NoEmptyLineSeparatorCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.ErrorResponse.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+      <message tool="checkstyle" line="24" message="Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." priority="3" rule="ModifierOrderCheck" category="style"/>
+      <message tool="checkstyle" line="24" message="Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'." priority="3" rule="ConstantNameCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.exceptions.ApiException.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.exceptions.DeviceOffException.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.exceptions.LinkButtonException.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.exceptions.UnauthorizedException.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.HttpClient.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.State.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.StateUpdate.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.ViraCube.java">
+      <message tool="pmd" line="80" message="&#xA;Avoid empty try blocks&#xA;" priority="3" rule="EmptyTryBlock" rule_url="https://pmd.github.io/pmd-5.8.1/pmd-java/rules/java/empty.html#EmptyTryBlock" category="empty code"/>
+      <message tool="pmd" line="141" message="&#xA;Avoid catching NullPointerException; consider removing the cause of the NPE.&#xA;" priority="2" rule="AvoidCatchingNPE" rule_url="https://pmd.github.io/pmd-5.8.1/pmd-java/rules/java/strictexception.html#AvoidCatchingNPE" category="strict exceptions"/>
+   <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+      <message tool="checkstyle" line="166" message="Remove empty line before closing brace" priority="3" rule="NoEmptyLineSeparatorCheck" category="style"/>
+   </file>
+<file name="org.openhab.binding.viratec.internal.ViraCubeConfigStatusMessage.java">
+      <message tool="checkstyle" line="0" message="Datei endet nicht mit einem Zeilenumbruch." priority="3" rule="NewlineAtEndOfFileCheck" category="style"/>
+      <message tool="checkstyle" line="20" message="Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." priority="3" rule="ModifierOrderCheck" category="style"/>
+   </file>
+   <file name="org.openhab.binding.viratec.internal.ViraTecHandlerFactory.java">
+      <message tool="checkstyle" line="47" message="Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." priority="3" rule="ModifierOrderCheck" category="style"/>
+      <message tool="checkstyle" line="66" message="Remove empty line before closing brace" priority="3" rule="NoEmptyLineSeparatorCheck" category="style"/>
+   </file>
+
+   <file name=".binding.viratec\ESH-INF\thing\ViraCube.xml">
+      <message tool="checkstyle" line="0" message="Unused bridge reference with id - bridge" priority="2" rule="EshInfXmlUsageCheck" category="style"/>
+   </file>
+</sca>

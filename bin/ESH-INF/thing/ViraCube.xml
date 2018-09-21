@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="viratec"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+                          xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+<!--Bridge Thing Type bzw. ViraCube Thing Type-->
+    <bridge-type id="bridge">
+        <label>ViraCube</label>
+        <description>The Viracube supports all ViraTec equipment</description>
+        <config-description>
+            <parameter name = "ipAddress" type = "text">
+                <context> network_address</context>
+                <label>Network Address</label>
+                <description>Network address of the ViraCube.</description>
+                <required>true</required>
+            </parameter>
+            <parameter name="userName" type="text">
+                <context>password</context>
+                <label>Username</label>
+                <description>Name of a registered ViraCube User, that allows to access the API</description>
+                <required>false</required>
+            </parameter>
+            <parameter name="pollingInterval" type="integer" min="1" step="1" unit="s">
+                <label>Polling Interval</label>
+                <description>Seconds between fetching values from the Bridge.</description>
+                <required>true</required>
+                <default>10</default>
+            </parameter>
+       </config-description>
+   </bridge-type>
+
+
+
+
+</thing:thing-descriptions>    

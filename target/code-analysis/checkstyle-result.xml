@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.1">
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\.classpath">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\about.html">
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\build.properties">
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\ESH-INF\binding\binding.xml">
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\ESH-INF\i18n\viratec_xx_XX.properties">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\ESH-INF\thing\channels.xml">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\ESH-INF\thing\Circuit.xml">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\ESH-INF\thing\ViraCube.xml">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\META-INF\MANIFEST.MF">
+<error line="14" severity="warning" message="The version of the package com.google.gson should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="15" severity="warning" message="The version of the package com.google.gson.reflect should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="16" severity="warning" message="The version of the package org.apache.commons.io should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="17" severity="warning" message="The version of the package org.apache.commons.lang.exception should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="34" severity="warning" message="The version of the package org.osgi.framework should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\OSGI-INF\.gitignore">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\OSGI-INF\org.openhab.binding.viratec.internal.ViraTecHandlerFactory.xml">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\pom.xml">
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\README.md">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\handler\CircuitStatusListener.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\handler\ViraCubeHandler.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="65" column="18" severity="info" message="Modifier &apos;static&apos; weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="183" severity="info" message="Remove empty line after opening brace" source="org.openhab.tools.analysis.checkstyle.NoEmptyLineSeparatorCheck"/>
+<error line="216" severity="info" message="Remove empty line before closing brace" source="org.openhab.tools.analysis.checkstyle.NoEmptyLineSeparatorCheck"/>
+<error line="264" severity="info" message="Remove empty line before closing brace" source="org.openhab.tools.analysis.checkstyle.NoEmptyLineSeparatorCheck"/>
+<error line="290" severity="info" message="Remove empty line before closing brace" source="org.openhab.tools.analysis.checkstyle.NoEmptyLineSeparatorCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\handler\ViraTecHandler.java">
+<error line="53" column="18" severity="info" message="Modifier &apos;static&apos; weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="245" severity="info" message="Remove empty line before closing brace" source="org.openhab.tools.analysis.checkstyle.NoEmptyLineSeparatorCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\Circuit.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="33" column="18" severity="info" message="Modifier &apos;static&apos; weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="33" column="30" severity="info" message="Der Bezeichner &apos;gsonType&apos; entspricht nicht dem Muster &apos;^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ConstantNameCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\Command.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\Config.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\discovery\CircuitDiscoveryService.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="43" column="19" severity="info" message="Modifier &apos;static&apos; weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="101" severity="info" message="Remove empty line before closing brace" source="org.openhab.tools.analysis.checkstyle.NoEmptyLineSeparatorCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\ErrorResponse.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="24" column="18" severity="info" message="Modifier &apos;static&apos; weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="24" column="30" severity="info" message="Der Bezeichner &apos;gsonType&apos; entspricht nicht dem Muster &apos;^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ConstantNameCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\exceptions\ApiException.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\exceptions\DeviceOffException.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\exceptions\LinkButtonException.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\exceptions\UnauthorizedException.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\HttpClient.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\State.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\StateUpdate.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\ViraCube.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\ViraCubeConfigStatusMessage.java">
+<error line="0" severity="info" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="20" column="11" severity="info" message="Modifier &apos;static&apos; weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\ViraTecHandlerFactory.java">
+<error line="47" column="18" severity="info" message="Modifier &apos;static&apos; weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="66" severity="info" message="Remove empty line before closing brace" source="org.openhab.tools.analysis.checkstyle.NoEmptyLineSeparatorCheck"/>
+</file>
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\ViraTecBindingConstants.java">
+</file>
+</checkstyle>

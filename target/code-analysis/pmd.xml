@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.8.1" timestamp="2018-01-17T07:53:23.526">
+<file name="C:\Users\MeinMa2\openhab2-master2\git\openhab2-addons\addons\binding\org.openhab.binding.viratec\src\main\java\org\openhab\binding\viratec\internal\ViraCube.java">
+<violation beginline="137" endline="137" begincolumn="22" endcolumn="41" rule="AvoidCatchingNPE" ruleset="Strict Exceptions" package="org.openhab.binding.viratec.internal" class="ViraCube" method="handleErrors" externalInfoUrl="https://pmd.github.io/pmd-5.8.1/pmd-java/rules/java/strictexception.html#AvoidCatchingNPE" priority="2">
+Avoid catching NullPointerException; consider removing the cause of the NPE.
+</violation>
+</file>
+</pmd>

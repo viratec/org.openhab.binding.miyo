@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="viratec"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+                          xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+    
+
+ <!-- Bewässerungskreis Thing Type-->
+    <thing-type id="circuit">
+        <label>Bewässerungsbereich</label>
+        <description> Provides various data about the garden</description>
+        <channels>
+            <channel id = "setIrrigation" typeID = "irrigation-channel">
+            <channel id = "getStatus" typeID = "status-channel">
+        </channels>
+     </thing-type>
+     
+</thing:thing-descriptions>

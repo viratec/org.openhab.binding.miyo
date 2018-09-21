@@ -1,0 +1,2830 @@
+<html xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <title>Analysis Report</title><style type="text/css">
+					body {margin-left: 3%; font-size:10pt;font-family:Arial;color:#000000 ; }					
+					table.details tr th {font-size:10pt;font-family:Arial;font-weight:bold;background:#AC58FA}
+					table.details tr {font-size:10pt;font-family:Arial;font-weight:normal;background:#BEa1Fa}
+					table tbody	tr.alternate {background:#BAF4A7;}
+					table tbody tr.dark {background:#F4F4A7;}
+				</style></head>
+   <body>
+      <h2>Report
+         					 
+         					(2018-01-17+01:00;
+         					 07:53:33.042+01:00)
+         				
+      </h2>
+      <h3>Summary Messages</h3>
+      <table width="90%" border="0" class="details">
+         <tr>
+            <th align="left">category</th>
+            <th align="left">tool</th>
+            <th align="left">priority</th>
+            <th align="left">rule</th>
+            <th align="left">count</th>
+         </tr>
+         <tr>
+            <td colspan="5">correctness</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>findbugs</td>
+            <td align="left">1</td>
+            <td> <a href="http://findbugs.sourceforge.net/bugDescriptions.html#SLF4J_FORMAT_SHOULD_BE_CONST">Format should be constant (SLF4J)</a></td>
+            <td align="center">8</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>findbugs</td>
+            <td align="left">2</td>
+            <td> <a href="http://findbugs.sourceforge.net/bugDescriptions.html#SA_FIELD_SELF_COMPARISON">Self comparison of field with itself (SA)</a></td>
+            <td align="center">2</td>
+         </tr>
+         <tr>
+            <td colspan="5">empty code</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>pmd</td>
+            <td align="left">3</td>
+            <td> <a href="https://pmd.github.io/pmd-5.8.1/pmd-java/rules/java/empty.html#EmptyIfStmt">EmptyIfStmt</a></td>
+            <td align="center">5</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>pmd</td>
+            <td align="left">3</td>
+            <td> <a href="https://pmd.github.io/pmd-5.8.1/pmd-java/rules/java/empty.html#EmptyTryBlock">EmptyTryBlock</a></td>
+            <td align="center">4</td>
+         </tr>
+         <tr>
+            <td colspan="5">java logging</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>pmd</td>
+            <td align="left">3</td>
+            <td> <a href="https://pmd.github.io/pmd-5.8.1/pmd-java/rules/java/logging-java.html#SystemPrintln">SystemPrintln</a></td>
+            <td align="center">4</td>
+         </tr>
+         <tr>
+            <td colspan="5">strict exceptions</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>pmd</td>
+            <td align="left">2</td>
+            <td> <a href="https://pmd.github.io/pmd-5.8.1/pmd-java/rules/java/strictexception.html#AvoidCatchingThrowable">AvoidCatchingThrowable</a></td>
+            <td align="center">4</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>pmd</td>
+            <td align="left">2</td>
+            <td> <a href="https://pmd.github.io/pmd-5.8.1/pmd-java/rules/java/strictexception.html#AvoidCatchingNPE">AvoidCatchingNPE</a></td>
+            <td align="center">8</td>
+         </tr>
+         <tr>
+            <td colspan="5">style</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>checkstyle</td>
+            <td align="left">1</td>
+            <td>EshInfXmlValidationCheck</td>
+            <td align="center">5</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>checkstyle</td>
+            <td align="left">1</td>
+            <td>RegexpHeaderCheck</td>
+            <td align="center">28</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>checkstyle</td>
+            <td align="left">1</td>
+            <td>AuthorTagCheck</td>
+            <td align="center">20</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>checkstyle</td>
+            <td align="left">2</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td align="center">14</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>checkstyle</td>
+            <td align="left">2</td>
+            <td>JavadocFilterCheck</td>
+            <td align="center">3</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>checkstyle</td>
+            <td align="left">2</td>
+            <td>EshInfXmlUsageCheck</td>
+            <td align="center">2</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>checkstyle</td>
+            <td align="left">3</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td align="center">26</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>checkstyle</td>
+            <td align="left">3</td>
+            <td>ModifierOrderCheck</td>
+            <td align="center">33</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>checkstyle</td>
+            <td align="left">3</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td align="center">42</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>checkstyle</td>
+            <td align="left">3</td>
+            <td>TodoCommentCheck</td>
+            <td align="center">6</td>
+         </tr>
+         <tr class="alternate">
+            <td></td>
+            <td>checkstyle</td>
+            <td align="left">3</td>
+            <td>ConstantNameCheck</td>
+            <td align="center">13</td>
+         </tr>
+         <tr class="dark">
+            <td colspan="4"></td>
+            <td align="center">227</td>
+         </tr>
+      </table>
+      <p></p>
+      <h3>Summary Files</h3>
+      <table width="90%" border="0" class="details">
+         <tr>
+            <th align="left" width="90pt">class file</th>
+            <th align="center" width="90pt">high</th>
+            <th align="center" width="90pt">medium</th>
+            <th align="center" width="90pt">low</th>
+            <th align="center" width="90pt">total</th>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#.binding.viratec.internal.ViraTecHandlerFactory.xml" title=".binding.viratec.internal.ViraTecHandlerFactory.xml">.binding.viratec.internal.ViraTecHandlerFactory.xml</a></td>
+            <td align="center">
+               <div class="p1">0</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#.binding.viratec\.classpath" title=".binding.viratec\.classpath">.binding.viratec\.classpath</a></td>
+            <td align="center">
+               <div class="p1">0</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#.binding.viratec\ESH-INF\i18n\viratec_xx_XX.properties" title=".binding.viratec\ESH-INF\i18n\viratec_xx_XX.properties">.binding.viratec\ESH-INF\i18n\viratec_xx_XX.properties</a></td>
+            <td align="center">
+               <div class="p1">0</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#.binding.viratec\ESH-INF\thing\Circuit.xml" title=".binding.viratec\ESH-INF\thing\Circuit.xml">.binding.viratec\ESH-INF\thing\Circuit.xml</a></td>
+            <td align="center">
+               <div class="p1">2</div>
+            </td>
+            <td align="center">
+               <div class="p2">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">4</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#.binding.viratec\ESH-INF\thing\ViraCube.xml" title=".binding.viratec\ESH-INF\thing\ViraCube.xml">.binding.viratec\ESH-INF\thing\ViraCube.xml</a></td>
+            <td align="center">
+               <div class="p1">0</div>
+            </td>
+            <td align="center">
+               <div class="p2">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">2</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#.binding.viratec\ESH-INF\thing\channels.xml" title=".binding.viratec\ESH-INF\thing\channels.xml">.binding.viratec\ESH-INF\thing\channels.xml</a></td>
+            <td align="center">
+               <div class="p1">3</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">4</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#.binding.viratec\META-INF\MANIFEST.MF" title=".binding.viratec\META-INF\MANIFEST.MF">.binding.viratec\META-INF\MANIFEST.MF</a></td>
+            <td align="center">
+               <div class="p1">0</div>
+            </td>
+            <td align="center">
+               <div class="p2">14</div>
+            </td>
+            <td align="center">
+               <div class="p3">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">14</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#.binding.viratec\OSGI-INF\.gitignore" title=".binding.viratec\OSGI-INF\.gitignore">.binding.viratec\OSGI-INF\.gitignore</a></td>
+            <td align="center">
+               <div class="p1">0</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#.binding.viratec\README.md" title=".binding.viratec\README.md">.binding.viratec\README.md</a></td>
+            <td align="center">
+               <div class="p1">0</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.handler.CircuitStatusListener.java" title="org.openhab.binding.viratec.handler.CircuitStatusListener.java">org.openhab.binding.viratec.handler.CircuitStatusListener.java</a></td>
+            <td align="center">
+               <div class="p1">2</div>
+            </td>
+            <td align="center">
+               <div class="p2">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">4</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.handler.ViraCubeHandler.java" title="org.openhab.binding.viratec.handler.ViraCubeHandler.java">org.openhab.binding.viratec.handler.ViraCubeHandler.java</a></td>
+            <td align="center">
+               <div class="p1">12</div>
+            </td>
+            <td align="center">
+               <div class="p2">8</div>
+            </td>
+            <td align="center">
+               <div class="p3">36</div>
+            </td>
+            <td align="center">
+               <div class="p3">56</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.handler.ViraTecHandler.java" title="org.openhab.binding.viratec.handler.ViraTecHandler.java">org.openhab.binding.viratec.handler.ViraTecHandler.java</a></td>
+            <td align="center">
+               <div class="p1">0</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">21</div>
+            </td>
+            <td align="center">
+               <div class="p3">21</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.Circuit.java" title="org.openhab.binding.viratec.internal.Circuit.java">org.openhab.binding.viratec.internal.Circuit.java</a></td>
+            <td align="center">
+               <div class="p1">1</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">11</div>
+            </td>
+            <td align="center">
+               <div class="p3">12</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.Command.java" title="org.openhab.binding.viratec.internal.Command.java">org.openhab.binding.viratec.internal.Command.java</a></td>
+            <td align="center">
+               <div class="p1">1</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">2</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.Config.java" title="org.openhab.binding.viratec.internal.Config.java">org.openhab.binding.viratec.internal.Config.java</a></td>
+            <td align="center">
+               <div class="p1">1</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">2</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.ErrorResponse.java" title="org.openhab.binding.viratec.internal.ErrorResponse.java">org.openhab.binding.viratec.internal.ErrorResponse.java</a></td>
+            <td align="center">
+               <div class="p1">4</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">9</div>
+            </td>
+            <td align="center">
+               <div class="p3">13</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.HttpClient.java" title="org.openhab.binding.viratec.internal.HttpClient.java">org.openhab.binding.viratec.internal.HttpClient.java</a></td>
+            <td align="center">
+               <div class="p1">4</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">5</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.State.java" title="org.openhab.binding.viratec.internal.State.java">org.openhab.binding.viratec.internal.State.java</a></td>
+            <td align="center">
+               <div class="p1">1</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">2</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.StateUpdate.java" title="org.openhab.binding.viratec.internal.StateUpdate.java">org.openhab.binding.viratec.internal.StateUpdate.java</a></td>
+            <td align="center">
+               <div class="p1">2</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">3</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.SuccessResponse.java" title="org.openhab.binding.viratec.internal.SuccessResponse.java">org.openhab.binding.viratec.internal.SuccessResponse.java</a></td>
+            <td align="center">
+               <div class="p1">4</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">9</div>
+            </td>
+            <td align="center">
+               <div class="p3">13</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.ViraCube.java" title="org.openhab.binding.viratec.internal.ViraCube.java">org.openhab.binding.viratec.internal.ViraCube.java</a></td>
+            <td align="center">
+               <div class="p1">4</div>
+            </td>
+            <td align="center">
+               <div class="p2">8</div>
+            </td>
+            <td align="center">
+               <div class="p3">11</div>
+            </td>
+            <td align="center">
+               <div class="p3">23</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.ViraCubeConfigStatusMessage.java" title="org.openhab.binding.viratec.internal.ViraCubeConfigStatusMessage.java">org.openhab.binding.viratec.internal.ViraCubeConfigStatusMessage.java</a></td>
+            <td align="center">
+               <div class="p1">5</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">5</div>
+            </td>
+            <td align="center">
+               <div class="p3">10</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.ViraTecHandlerFactory.java" title="org.openhab.binding.viratec.internal.ViraTecHandlerFactory.java">org.openhab.binding.viratec.internal.ViraTecHandlerFactory.java</a></td>
+            <td align="center">
+               <div class="p1">0</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">4</div>
+            </td>
+            <td align="center">
+               <div class="p3">4</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.discovery.CircuitDiscoveryService.java" title="org.openhab.binding.viratec.internal.discovery.CircuitDiscoveryService.java">org.openhab.binding.viratec.internal.discovery.CircuitDiscoveryService.java</a></td>
+            <td align="center">
+               <div class="p1">2</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">6</div>
+            </td>
+            <td align="center">
+               <div class="p3">8</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.discovery.ViraCubeDiscoveryParticipant.java" title="org.openhab.binding.viratec.internal.discovery.ViraCubeDiscoveryParticipant.java">org.openhab.binding.viratec.internal.discovery.ViraCubeDiscoveryParticipant.java</a></td>
+            <td align="center">
+               <div class="p1">2</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">3</div>
+            </td>
+            <td align="center">
+               <div class="p3">5</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.exceptions.ApiException.java" title="org.openhab.binding.viratec.internal.exceptions.ApiException.java">org.openhab.binding.viratec.internal.exceptions.ApiException.java</a></td>
+            <td align="center">
+               <div class="p1">3</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">4</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.exceptions.DeviceOffException.java" title="org.openhab.binding.viratec.internal.exceptions.DeviceOffException.java">org.openhab.binding.viratec.internal.exceptions.DeviceOffException.java</a></td>
+            <td align="center">
+               <div class="p1">2</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">3</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.exceptions.LinkButtonException.java" title="org.openhab.binding.viratec.internal.exceptions.LinkButtonException.java">org.openhab.binding.viratec.internal.exceptions.LinkButtonException.java</a></td>
+            <td align="center">
+               <div class="p1">3</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">4</div>
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td><a href="#org.openhab.binding.viratec.internal.exceptions.UnauthorizedException.java" title="org.openhab.binding.viratec.internal.exceptions.UnauthorizedException.java">org.openhab.binding.viratec.internal.exceptions.UnauthorizedException.java</a></td>
+            <td align="center">
+               <div class="p1">3</div>
+            </td>
+            <td align="center">
+               <div class="p2">0</div>
+            </td>
+            <td align="center">
+               <div class="p3">1</div>
+            </td>
+            <td align="center">
+               <div class="p3">4</div>
+            </td>
+         </tr>
+         <tr class="dark">
+            <td></td>
+            <td align="center">
+               <div class="p1">61</div>
+            </td>
+            <td align="center">
+               <div class="p2">33</div>
+            </td>
+            <td align="center">
+               <div class="p3">133</div>
+            </td>
+            <td align="center">
+               <div class="p3">227</div>
+            </td>
+         </tr>
+      </table>
+      <p></p>
+      <h3>Details by Class</h3>
+      <table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name=".binding.viratec.internal.ViraTecHandlerFactory.xml">.binding.viratec.internal.ViraTecHandlerFactory.xml</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name=".binding.viratec\.classpath">.binding.viratec\.classpath</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name=".binding.viratec\ESH-INF\i18n\viratec_xx_XX.properties">.binding.viratec\ESH-INF\i18n\viratec_xx_XX.properties</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name=".binding.viratec\ESH-INF\thing\Circuit.xml">.binding.viratec\ESH-INF\thing\Circuit.xml</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>13</td>
+            <td>style</td>
+            <td>EshInfXmlValidationCheck</td>
+            <td>Attribute typeID is not allowed to appear in element channel.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>18</td>
+            <td>style</td>
+            <td>EshInfXmlValidationCheck</td>
+            <td>Invalid content was found starting with element channel-groups. One of {properties, representation-property, config-description,
+               config-description-ref} is expected.
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>0</td>
+            <td>style</td>
+            <td>EshInfXmlUsageCheck</td>
+            <td>Missing configuration for the configuration reference with uri - thing-type:viratec:config</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name=".binding.viratec\ESH-INF\thing\ViraCube.xml">.binding.viratec\ESH-INF\thing\ViraCube.xml</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>0</td>
+            <td>style</td>
+            <td>EshInfXmlUsageCheck</td>
+            <td>Unused bridge reference with id - bridge</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name=".binding.viratec\ESH-INF\thing\channels.xml">.binding.viratec\ESH-INF\thing\channels.xml</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>14</td>
+            <td>style</td>
+            <td>EshInfXmlValidationCheck</td>
+            <td>Invalid content was found starting with element description. One of {tags, state, event, config-description, config-description-ref}
+               is expected.
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>23</td>
+            <td>style</td>
+            <td>EshInfXmlValidationCheck</td>
+            <td>Invalid content was found starting with element description. One of {event, config-description, config-description-ref} is
+               expected.
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>46</td>
+            <td>style</td>
+            <td>EshInfXmlValidationCheck</td>
+            <td>Invalid content was found starting with element channel-groupe-type. One of {thing-type, bridge-type, channel-type, channel-group-type}
+               is expected.
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name=".binding.viratec\META-INF\MANIFEST.MF">.binding.viratec\META-INF\MANIFEST.MF</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>14</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package com.google.gson.reflect should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>15</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package org.apache.commons.lang.exception should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>28</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package org.osgi.framework should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>14</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package com.google.gson should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>15</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package com.google.gson.reflect should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>16</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package org.apache.commons.lang.exception should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>29</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package org.osgi.framework should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>16</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package org.apache.commons.io should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>17</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package org.apache.commons.lang.exception should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>30</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package org.osgi.framework should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>31</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package org.osgi.framework should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>32</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package org.osgi.framework should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>33</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package org.osgi.framework should not be specified</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>34</td>
+            <td>style</td>
+            <td>ManifestPackageVersionCheck</td>
+            <td>The version of the package org.osgi.framework should not be specified</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name=".binding.viratec\OSGI-INF\.gitignore">.binding.viratec\OSGI-INF\.gitignore</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name=".binding.viratec\README.md">.binding.viratec\README.md</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.handler.CircuitStatusListener.java">org.openhab.binding.viratec.handler.CircuitStatusListener.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>17</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>17</td>
+            <td>style</td>
+            <td>JavadocFilterCheck</td>
+            <td>Missing Javadoc comment.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.handler.ViraCubeHandler.java">org.openhab.binding.viratec.handler.ViraCubeHandler.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>findbugs</td>
+            <td>1</td>
+            <td>128</td>
+            <td>correctness</td>
+            <td>Format should be constant (SLF4J)</td>
+            <td>Format should be constant. Use placeholder to reduce the needless cost of parameter construction. see http://www.slf4j.org/faq.html#logging_performance</td>
+         </tr>
+         <tr class="alternate">
+            <td>findbugs</td>
+            <td>1</td>
+            <td>132</td>
+            <td>correctness</td>
+            <td>Format should be constant (SLF4J)</td>
+            <td>Format should be constant. Use placeholder to reduce the needless cost of parameter construction. see http://www.slf4j.org/faq.html#logging_performance</td>
+         </tr>
+         <tr class="alternate">
+            <td>findbugs</td>
+            <td>1</td>
+            <td>136</td>
+            <td>correctness</td>
+            <td>Format should be constant (SLF4J)</td>
+            <td>Format should be constant. Use placeholder to reduce the needless cost of parameter construction. see http://www.slf4j.org/faq.html#logging_performance</td>
+         </tr>
+         <tr class="alternate">
+            <td>findbugs</td>
+            <td>1</td>
+            <td>140</td>
+            <td>correctness</td>
+            <td>Format should be constant (SLF4J)</td>
+            <td>Format should be constant. Use placeholder to reduce the needless cost of parameter construction. see http://www.slf4j.org/faq.html#logging_performance</td>
+         </tr>
+         <tr class="alternate">
+            <td>findbugs</td>
+            <td>1</td>
+            <td>141</td>
+            <td>correctness</td>
+            <td>Format should be constant (SLF4J)</td>
+            <td>Format should be constant. Use placeholder to reduce the needless cost of parameter construction. see http://www.slf4j.org/faq.html#logging_performance</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>34</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>38</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>findbugs</td>
+            <td>1</td>
+            <td>129</td>
+            <td>correctness</td>
+            <td>Format should be constant (SLF4J)</td>
+            <td>Format should be constant. Use placeholder to reduce the needless cost of parameter construction. see http://www.slf4j.org/faq.html#logging_performance</td>
+         </tr>
+         <tr class="alternate">
+            <td>findbugs</td>
+            <td>1</td>
+            <td>133</td>
+            <td>correctness</td>
+            <td>Format should be constant (SLF4J)</td>
+            <td>Format should be constant. Use placeholder to reduce the needless cost of parameter construction. see http://www.slf4j.org/faq.html#logging_performance</td>
+         </tr>
+         <tr class="alternate">
+            <td>findbugs</td>
+            <td>1</td>
+            <td>137</td>
+            <td>correctness</td>
+            <td>Format should be constant (SLF4J)</td>
+            <td>Format should be constant. Use placeholder to reduce the needless cost of parameter construction. see http://www.slf4j.org/faq.html#logging_performance</td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>2</td>
+            <td>127</td>
+            <td>strict exceptions</td>
+            <td>AvoidCatchingThrowable</td>
+            <td>
+               A catch statement should never catch throwable since it includes errors.
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>2</td>
+            <td>131</td>
+            <td>strict exceptions</td>
+            <td>AvoidCatchingThrowable</td>
+            <td>
+               A catch statement should never catch throwable since it includes errors.
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>2</td>
+            <td>135</td>
+            <td>strict exceptions</td>
+            <td>AvoidCatchingThrowable</td>
+            <td>
+               A catch statement should never catch throwable since it includes errors.
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>2</td>
+            <td>139</td>
+            <td>strict exceptions</td>
+            <td>AvoidCatchingThrowable</td>
+            <td>
+               A catch statement should never catch throwable since it includes errors.
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>findbugs</td>
+            <td>2</td>
+            <td>184</td>
+            <td>correctness</td>
+            <td>Self comparison of field with itself (SA)</td>
+            <td>Self comparison of org.eclipse.smarthome.core.library.types.OnOffType.ON with itself in org.openhab.binding.viratec.handler.ViraCubeHandler.updateCircuitState(Circuit,
+               StateUpdate)
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>findbugs</td>
+            <td>2</td>
+            <td>187</td>
+            <td>correctness</td>
+            <td>Self comparison of field with itself (SA)</td>
+            <td>Self comparison of org.eclipse.smarthome.core.library.types.OnOffType.ON with itself in org.openhab.binding.viratec.handler.ViraCubeHandler.updateCircuitState(Circuit,
+               StateUpdate)
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>34</td>
+            <td>style</td>
+            <td>JavadocFilterCheck</td>
+            <td>Missing Javadoc comment.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>2</td>
+            <td>38</td>
+            <td>style</td>
+            <td>JavadocFilterCheck</td>
+            <td>Missing Javadoc comment.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>36</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>72</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>74</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>100</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line after opening brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>157</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>40</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>76</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>78</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>104</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line after opening brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>161</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>44</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>80</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>82</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>108</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line after opening brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>165</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>48</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>84</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>86</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>112</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line after opening brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>164</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>168</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>169</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>62</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>181</td>
+            <td>style</td>
+            <td>TodoCommentCheck</td>
+            <td>Kommentar entspricht to-do-Format '(TODO)|(FIXME)'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>232</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>258</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>65</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>197</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>245</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>274</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>271</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>183</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line after opening brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>216</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>264</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>290</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.handler.ViraTecHandler.java">org.openhab.binding.viratec.handler.ViraTecHandler.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>116</td>
+            <td>empty code</td>
+            <td>EmptyIfStmt</td>
+            <td>
+               Avoid empty if statements
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>122</td>
+            <td>empty code</td>
+            <td>EmptyIfStmt</td>
+            <td>
+               Avoid empty if statements
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>38</td>
+            <td>style</td>
+            <td>TodoCommentCheck</td>
+            <td>Kommentar entspricht to-do-Format '(TODO)|(FIXME)'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>45</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>117</td>
+            <td>style</td>
+            <td>TodoCommentCheck</td>
+            <td>Kommentar entspricht to-do-Format '(TODO)|(FIXME)'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>121</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>115</td>
+            <td>empty code</td>
+            <td>EmptyIfStmt</td>
+            <td>
+               Avoid empty if statements
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>121</td>
+            <td>empty code</td>
+            <td>EmptyIfStmt</td>
+            <td>
+               Avoid empty if statements
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>44</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>116</td>
+            <td>style</td>
+            <td>TodoCommentCheck</td>
+            <td>Kommentar entspricht to-do-Format '(TODO)|(FIXME)'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>120</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>153</td>
+            <td>empty code</td>
+            <td>EmptyIfStmt</td>
+            <td>
+               Avoid empty if statements
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>48</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>183</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>51</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>226</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>52</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>235</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>240</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>53</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>245</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.Circuit.java">org.openhab.binding.viratec.internal.Circuit.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>20</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>20</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>24</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>24</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>28</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>28</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>32</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>32</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>33</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>33</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.Command.java">org.openhab.binding.viratec.internal.Command.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.Config.java">org.openhab.binding.viratec.internal.Config.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.ErrorResponse.java">org.openhab.binding.viratec.internal.ErrorResponse.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>8</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>14</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>9</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>9</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>15</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>15</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>20</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>20</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>24</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>24</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.HttpClient.java">org.openhab.binding.viratec.internal.HttpClient.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>14</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>19</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.State.java">org.openhab.binding.viratec.internal.State.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.StateUpdate.java">org.openhab.binding.viratec.internal.StateUpdate.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>5</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.SuccessResponse.java">org.openhab.binding.viratec.internal.SuccessResponse.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>9</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>15</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>10</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>10</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>16</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>16</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>21</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>21</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>25</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>25</td>
+            <td>style</td>
+            <td>ConstantNameCheck</td>
+            <td>Der Bezeichner 'gsonType' entspricht nicht dem Muster '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.ViraCube.java">org.openhab.binding.viratec.internal.ViraCube.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>18</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>23</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>2</td>
+            <td>131</td>
+            <td>strict exceptions</td>
+            <td>AvoidCatchingNPE</td>
+            <td>
+               Avoid catching NullPointerException; consider removing the cause of the NPE.
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>2</td>
+            <td>136</td>
+            <td>strict exceptions</td>
+            <td>AvoidCatchingNPE</td>
+            <td>
+               Avoid catching NullPointerException; consider removing the cause of the NPE.
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>2</td>
+            <td>140</td>
+            <td>strict exceptions</td>
+            <td>AvoidCatchingNPE</td>
+            <td>
+               Avoid catching NullPointerException; consider removing the cause of the NPE.
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>2</td>
+            <td>144</td>
+            <td>strict exceptions</td>
+            <td>AvoidCatchingNPE</td>
+            <td>
+               Avoid catching NullPointerException; consider removing the cause of the NPE.
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>2</td>
+            <td>133</td>
+            <td>strict exceptions</td>
+            <td>AvoidCatchingNPE</td>
+            <td>
+               Avoid catching NullPointerException; consider removing the cause of the NPE.
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>2</td>
+            <td>141</td>
+            <td>strict exceptions</td>
+            <td>AvoidCatchingNPE</td>
+            <td>
+               Avoid catching NullPointerException; consider removing the cause of the NPE.
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>2</td>
+            <td>137</td>
+            <td>strict exceptions</td>
+            <td>AvoidCatchingNPE</td>
+            <td>
+               Avoid catching NullPointerException; consider removing the cause of the NPE.
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>2</td>
+            <td>138</td>
+            <td>strict exceptions</td>
+            <td>AvoidCatchingNPE</td>
+            <td>
+               Avoid catching NullPointerException; consider removing the cause of the NPE.
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>81</td>
+            <td>java logging</td>
+            <td>SystemPrintln</td>
+            <td>
+               System.out.println is used
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>86</td>
+            <td>java logging</td>
+            <td>SystemPrintln</td>
+            <td>
+               System.out.println is used
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>90</td>
+            <td>java logging</td>
+            <td>SystemPrintln</td>
+            <td>
+               System.out.println is used
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>94</td>
+            <td>java logging</td>
+            <td>SystemPrintln</td>
+            <td>
+               System.out.println is used
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>71</td>
+            <td>empty code</td>
+            <td>EmptyTryBlock</td>
+            <td>
+               Avoid empty try blocks
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>80</td>
+            <td>empty code</td>
+            <td>EmptyTryBlock</td>
+            <td>
+               Avoid empty try blocks
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>76</td>
+            <td>empty code</td>
+            <td>EmptyTryBlock</td>
+            <td>
+               Avoid empty try blocks
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>pmd</td>
+            <td>3</td>
+            <td>77</td>
+            <td>empty code</td>
+            <td>EmptyTryBlock</td>
+            <td>
+               Avoid empty try blocks
+               
+            </td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>166</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>165</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.ViraCubeConfigStatusMessage.java">org.openhab.binding.viratec.internal.ViraCubeConfigStatusMessage.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Die erforderliche Kopfzeile fehlt - Datei hat nicht genug Zeilen.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>3</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>10</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>5</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>12</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>16</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>20</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.ViraTecHandlerFactory.java">org.openhab.binding.viratec.internal.ViraTecHandlerFactory.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>42</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>57</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>47</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>66</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.discovery.CircuitDiscoveryService.java">org.openhab.binding.viratec.internal.discovery.CircuitDiscoveryService.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>24</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>29</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>95</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>43</td>
+            <td>style</td>
+            <td>ModifierOrderCheck</td>
+            <td>Modifier 'static' weicht ab von der empfohlenen Modifier-Reihenfolge der Java Language Specification.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>109</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>101</td>
+            <td>style</td>
+            <td>NoEmptyLineSeparatorCheck</td>
+            <td>Remove empty line before closing brace</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.discovery.ViraCubeDiscoveryParticipant.java">org.openhab.binding.viratec.internal.discovery.ViraCubeDiscoveryParticipant.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>23</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>20</td>
+            <td>style</td>
+            <td>TodoCommentCheck</td>
+            <td>Kommentar entspricht to-do-Format '(TODO)|(FIXME)'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>21</td>
+            <td>style</td>
+            <td>TodoCommentCheck</td>
+            <td>Kommentar entspricht to-do-Format '(TODO)|(FIXME)'.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.exceptions.ApiException.java">org.openhab.binding.viratec.internal.exceptions.ApiException.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>3</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.exceptions.DeviceOffException.java">org.openhab.binding.viratec.internal.exceptions.DeviceOffException.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>3</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.exceptions.LinkButtonException.java">org.openhab.binding.viratec.internal.exceptions.LinkButtonException.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>3</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br><table width="90%" border="0" class="details">
+         <th align="left" colspan="6"><a name="org.openhab.binding.viratec.internal.exceptions.UnauthorizedException.java">org.openhab.binding.viratec.internal.exceptions.UnauthorizedException.java</a></th>
+         <tr>
+            <th align="left" width="80pt">tool</th>
+            <th align="left" width="50pt">priority</th>
+            <th align="left" width="30pt">line</th>
+            <th align="left" width="80pt">category</th>
+            <th align="left" width="380pt">rule</th>
+            <th align="left">message</th>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>1</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^/\*\*$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>3</td>
+            <td>style</td>
+            <td>AuthorTagCheck</td>
+            <td>An author tag is missing</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>1</td>
+            <td>2</td>
+            <td>style</td>
+            <td>RegexpHeaderCheck</td>
+            <td>Zeile entspricht nicht der erwarteten Kopfzeile '^ \* Copyright \(c\) \d\d\d\d-\d\d\d\d by the respective copyright holders\.$'.</td>
+         </tr>
+         <tr class="alternate">
+            <td>checkstyle</td>
+            <td>3</td>
+            <td>0</td>
+            <td>style</td>
+            <td>NewlineAtEndOfFileCheck</td>
+            <td>Datei endet nicht mit einem Zeilenumbruch.</td>
+         </tr>
+      </table><br></body>
+</html>

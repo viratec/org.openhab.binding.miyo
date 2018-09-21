@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="miyo"
+                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+                          xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+    <!--Channels für ViraCube-->
+    
+     <!-- Bewässerung einschalten Channel Type-->
+    <channel-type id="irrigation-channel">
+        <item-type>Switch</item-type>
+        <label>Activation of Watering</label>
+        <description>Waters the selected circuit.</description>
+        <category>switch</category>
+    </channel-type>
+    
+    <!--Wintermode an- und ausschalten Channel Type-->
+    <channel-type id = "winter-channel">
+        <item-type>Switch</item-type>
+        <label>Wintermode Switch</label>
+        <description>Turns on or off the wintermode of the selected circuit</description>
+        <category>switch</category>
+    </channel-type>    
+   
+   <!--Borderbottom Channel Type-->
+    <channel-type id="borderbottom-channel">
+        <item-type>Number</item-type>
+        <label>Borderbottom</label>
+        <description>Shows the borderbottom</description>
+        <category>Humidity</category>
+        <state readOnly="true" pattern="%d %%"/>
+    </channel-type>
+
+    <!--Bordertop Channel Type-->
+    <channel-type id="bordertop-channel">
+        <item-type>Number</item-type>
+        <label>Bordertop</label>
+        <description>Shows the bordertop</description>
+        <category>Humidity</category>
+        <state readOnly="true" pattern="%d %%"/>
+    </channel-type>
+    
+    <!--IrrigationNextStart Channel Type-->
+    <channel-type id = "irrigationStart-channel">
+        <item-type>String</item-type>
+        <label>Next Start</label>
+        <description>The Watering starts next at this time</description>
+        <category>Time</category>
+        <state readOnly="true"> </state>
+    </channel-type>
+    
+     <!--IrrigationNextEnd Channel Type-->
+    <channel-type id = "irrigationEnd-channel">
+        <item-type>String</item-type>
+        <label>Next stop</label>
+        <description>The Watering stops next at this time</description>
+        <category>Time</category>
+        <state readOnly="true"> </state>
+    </channel-type>
+      
+    <!--Temperature Channel Type-->
+    <channel-type id = "temperature-channel">
+        <item-type>Number</item-type>
+        <label>Temperature</label>
+        <description>Temperature of this circuit</description>
+        <category>Temperature</category>
+        <state readOnly="true" pattern="%.1f °C"/>
+    </channel-type>   
+    
+    <!--Humidity Channel Type-->
+    <channel-type id="humidity-channel">
+        <item-type>Number</item-type>
+        <label>Moisture</label>
+        <description>Moisture of this circuit</description>
+        <category>Humidity</category>
+        <state readOnly="true" pattern="%d %%"/>
+    </channel-type> 
+    
+    <!--Brightness Channel Type-->
+    <channel-type id="brightness-channel">
+        <item-type>Number</item-type>
+        <label>Brightness</label>
+        <description>Brightness of this circuit</description>
+        <category>Humidity</category>
+        <state readOnly="true"/>
+    </channel-type>
+    
+    <!--ConsiderMower Channel Type-->
+    <channel-type id="considerMower-channel">
+        <item-type>Contact</item-type>
+        <label>Consider Mower</label>
+        <description>Shows the mower state</description>
+        <category>Contact</category>
+        <state readOnly="true"/>
+    </channel-type>
+    
+    <!--ExternBlock Channel Type-->
+    <channel-type id="externBlock-channel">
+        <item-type>Contact</item-type>
+        <label>Block Irrigation</label>
+        <description>Shows if the Block Irrigation is open or closed</description>
+        <category>Contact</category>
+        <state readOnly="true"/>
+    </channel-type>   
+    
+     
+        
+   
+</thing:thing-descriptions>    
