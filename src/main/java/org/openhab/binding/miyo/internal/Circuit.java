@@ -6,7 +6,7 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package org.openhab.binding.viratec.internal;
+package org.openhab.binding.miyo.internal;
 
 import java.lang.reflect.Type;
 import java.util.Map;
@@ -23,7 +23,7 @@ import com.google.gson.reflect.TypeToken;
 public class Circuit {
     private boolean wintermode;
     private boolean irrigation;
-    private String id; // Entspricht der OriginalId aus dem ViraCube, die die geschweiften Klammern enthält
+    private String id; // Entspricht der OriginalId aus dem Cube, die die geschweiften Klammern enthält
     private String openhabId; // Entspricht der Id, aber ohne geschweifte Klammern
     private String name;
     private State params; // Speichert weitere Informationen wie Bordertop und Borderbottom die im JSON eine Ebenen

@@ -6,19 +6,19 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package org.openhab.binding.viratec;
+package org.openhab.binding.miyo;
 
 //import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.smarthome.core.thing.ThingTypeUID;
 
 /**
- * The {@link ViraTecBindingConstants} class defines common constants, which are
+ * The {@link MiyoBindingConstants} class defines common constants, which are
  * used across the whole binding.
  *
  *
  */
 // @NonNullByDefault
-public class ViraTecBindingConstants {
+public class MiyoBindingConstants {
 
     public static final String BINDING_ID = "miyo";
 
@@ -39,7 +39,7 @@ public class ViraTecBindingConstants {
     public static final String CHANNEL_EXTERNBLOCK = "getExternBlock";
     public static final String CHANNEL_CONSIDERMOWER = "getConsiderMower";
 
-    // Bridge bzw. ViraCube config properties
+    // Bridge bzw. Cube config properties
     public static final String HOST = "ipAddress";
     public static final String USER_NAME = "userName";
     public static final String POLLING_INTERVAL = "pollingInterval";

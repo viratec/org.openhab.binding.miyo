@@ -6,9 +6,9 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package org.openhab.binding.viratec.handler;
+package org.openhab.binding.miyo.handler;
 
-import static org.openhab.binding.viratec.ViraTecBindingConstants.*;
+import static org.openhab.binding.miyo.MiyoBindingConstants.*;
 
 import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
@@ -33,43 +33,43 @@ import org.eclipse.smarthome.core.thing.binding.ThingHandler;
 import org.eclipse.smarthome.core.types.Command;
 import org.eclipse.smarthome.core.types.State;
 import org.joda.time.format.DateTimeFormat;
-import org.openhab.binding.viratec.internal.Circuit;
-import org.openhab.binding.viratec.internal.StateUpdate;
-import org.openhab.binding.viratec.internal.ViraCube;
-import org.openhab.binding.viratec.internal.exceptions.IrrigationException;
+import org.openhab.binding.miyo.internal.Circuit;
+import org.openhab.binding.miyo.internal.StateUpdate;
+import org.openhab.binding.miyo.internal.Cube;
+import org.openhab.binding.miyo.internal.exceptions.IrrigationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The {@link ViraTecHandler} is responsible for handling commands, which are
+ * The {@link MiyoHandler} is responsible for handling commands, which are
  * sent to one of the channels.
  *
  *
  */
 
 @NonNullByDefault
-public class ViraTecHandler extends BaseThingHandler implements CircuitStatusListener {
+public class MiyoHandler extends BaseThingHandler implements CircuitStatusListener {
 
-    private final Logger logger = LoggerFactory.getLogger(ViraTecHandler.class);
+    private final Logger logger = LoggerFactory.getLogger(MiyoHandler.class);
 
     public final static Set<ThingTypeUID> SUPPORTED_THING_TYPES = Stream.of(THING_TYPE_CIRCUIT)
             .collect(Collectors.toSet());
 
     @NonNullByDefault({})
     private String circuitID;
-    private @Nullable ViraCubeHandler viraCubeHandler;
+    private @Nullable CubeHandler cubeHandler;
     @Nullable
     ScheduledFuture<?> refreshJob;
 
     private org.joda.time.format.DateTimeFormatter formatter = DateTimeFormat.forPattern("dd.MM.yyyy HH:mm");
 
-    public ViraTecHandler(Thing thing) {
+    public MiyoHandler(Thing thing) {
         super(thing);
     }
 
     @Override
     public void initialize() {
-        logger.debug("Initialize ViraTecHandler.");
+        logger.debug("Initialize MiyoHandler.");
         Bridge bridge = getBridge();
         initializeThing((bridge == null) ? null : bridge.getStatus());
     }
@@ -81,7 +81,7 @@ public class ViraTecHandler extends BaseThingHandler implements CircuitStatusLis
         final String configCircuitId = (String) getConfig().get(CIRCUIT_ID);
         if (configCircuitId != null) {
             circuitID = configCircuitId;
-            if (getViraCubeHandler() != null) {
+            if (getCubeHandler() != null) {
                 if (bridgestatus == ThingStatus.ONLINE) {
                     // initializeProperties();
                     updateStatus(ThingStatus.ONLINE);
@@ -116,31 +116,31 @@ public class ViraTecHandler extends BaseThingHandler implements CircuitStatusLis
         }, 0, 15, TimeUnit.SECONDS);
     }
 
-    private synchronized @Nullable ViraCubeHandler getViraCubeHandler() {
-        if (this.viraCubeHandler == null) {
+    private synchronized @Nullable CubeHandler getCubeHandler() {
+        if (this.cubeHandler == null) {
             Bridge bridge = getBridge();
             if (bridge == null) {
                 return null;
             }
             ThingHandler handler = bridge.getHandler();
-            if (handler instanceof ViraCubeHandler) {
-                this.viraCubeHandler = (ViraCubeHandler) handler;
-                this.viraCubeHandler.registerCircuitStatusListener(this);
+            if (handler instanceof CubeHandler) {
+                this.cubeHandler = (CubeHandler) handler;
+                this.cubeHandler.registerCircuitStatusListener(this);
             } else {
                 return null;
             }
         }
-        return this.viraCubeHandler;
+        return this.cubeHandler;
     }
 
     @Override
     public void dispose() {
         logger.debug("Handler disposes");
         if (circuitID != null) {
-            ViraCubeHandler viraCubeHandler = getViraCubeHandler();
-            if (viraCubeHandler != null) {
-                viraCubeHandler.unregisterCircuitStatusListener(this);
-                this.viraCubeHandler = null;
+            CubeHandler cubeHandler = getCubeHandler();
+            if (cubeHandler != null) {
+                cubeHandler.unregisterCircuitStatusListener(this);
+                this.cubeHandler = null;
             }
             circuitID = null;
         }
@@ -151,17 +151,17 @@ public class ViraTecHandler extends BaseThingHandler implements CircuitStatusLis
     }
 
     private @Nullable Circuit getCircuit() {
-        ViraCubeHandler viraCubeHandler = getViraCubeHandler();
-        if (viraCubeHandler != null) {
-            return viraCubeHandler.getCircuitById(circuitID);
+        CubeHandler cubeHandler = getCubeHandler();
+        if (cubeHandler != null) {
+            return cubeHandler.getCircuitById(circuitID);
         }
         return null;
     }
 
     @Override
     public void handleCommand(ChannelUID channelUID, Command command) {
-        ViraCubeHandler cubeHandler = getViraCubeHandler();
-        if (viraCubeHandler == null) {
+        CubeHandler cubeHandler = getCubeHandler();
+        if (cubeHandler == null) {
             logger.warn("MIYOCubeHandler not found. Cannot handle Command without MIYOCube");
             return;
         }
@@ -273,14 +273,14 @@ public class ViraTecHandler extends BaseThingHandler implements CircuitStatusLis
     }
 
     @Override
-    public void onCircuitAdded(@Nullable ViraCube viraCube, Circuit circuit) {
+    public void onCircuitAdded(@Nullable Cube cube, Circuit circuit) {
         if (circuit.getOpenhabId().equals(circuitID)) {
             updateStatus(ThingStatus.ONLINE);
         }
     }
 
     @Override
-    public void onCircuitRemoved(@Nullable ViraCube viraCube, Circuit circuit) {
+    public void onCircuitRemoved(@Nullable Cube cube, Circuit circuit) {
         if (circuit.getOpenhabId().equals(circuitID)) {
             updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.NONE, "offline circuit removed");
         }
@@ -288,7 +288,7 @@ public class ViraTecHandler extends BaseThingHandler implements CircuitStatusLis
 
     @Override
     public void channelLinked(ChannelUID channelUID) {
-        ViraCubeHandler handler = getViraCubeHandler();
+        CubeHandler handler = getCubeHandler();
         if (handler != null) {
             Circuit circuit = handler.getCircuitById(circuitID);
             if (circuit != null) {
@@ -299,7 +299,7 @@ public class ViraTecHandler extends BaseThingHandler implements CircuitStatusLis
     }
 
     @Override
-    public void onCircuitStateChanged(@Nullable ViraCube viracube, Circuit circuit) {
+    public void onCircuitStateChanged(@Nullable Cube cube, Circuit circuit) {
         logger.trace("OnCircuitStateChanged() was called");
         if (!circuit.getOpenhabId().equals(circuitID)) {
             logger.trace("Received state changed for another handler's circuit({}). Will be ignored", circuit.getId());

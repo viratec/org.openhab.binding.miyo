@@ -6,7 +6,7 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package org.openhab.binding.viratec.internal;
+package org.openhab.binding.miyo.internal;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,11 +17,11 @@ import java.util.Set;
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.jdt.annotation.Nullable;
 import org.joda.time.DateTime;
-import org.openhab.binding.viratec.internal.HttpClient.Result;
-import org.openhab.binding.viratec.internal.exceptions.ApiException;
-import org.openhab.binding.viratec.internal.exceptions.IrrigationException;
-import org.openhab.binding.viratec.internal.exceptions.LinkButtonException;
-import org.openhab.binding.viratec.internal.exceptions.UnauthorizedException;
+import org.openhab.binding.miyo.internal.HttpClient.Result;
+import org.openhab.binding.miyo.internal.exceptions.ApiException;
+import org.openhab.binding.miyo.internal.exceptions.IrrigationException;
+import org.openhab.binding.miyo.internal.exceptions.LinkButtonException;
+import org.openhab.binding.miyo.internal.exceptions.UnauthorizedException;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -33,11 +33,11 @@ import com.google.gson.JsonParser;
 /**
  *
  *
- * {@link ViraCube} als Bridge für alle Circuits Verbindung zwischen Circuits und openhab über ViraCube
+ * {@link Cube} als Bridge für alle Circuits Verbindung zwischen Circuits und openhab über Cube
  */
 
 @NonNullByDefault
-public class ViraCube {
+public class Cube {
     private final String DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss";
     private @Nullable String username;
     private final String ip;
@@ -45,11 +45,11 @@ public class ViraCube {
     private final JsonParser parser = new JsonParser();
     private HttpClient http = new HttpClient();
 
-    public ViraCube(String ip) {
+    public Cube(String ip) {
         this.ip = ip;
     }
 
-    public ViraCube(String ip, String username) throws IOException, ApiException {
+    public Cube(String ip, String username) throws IOException, ApiException {
         this.ip = ip;
         authenticate(username);
     }
@@ -67,7 +67,7 @@ public class ViraCube {
         return username;
     }
 
-    // Hier sieht man ob die Authentifizierung mit dem ViraCube erfolgreich war oder nicht
+    // Hier sieht man ob die Authentifizierung mit dem Cube erfolgreich war oder nicht
     public boolean isAuthenticated() {
         return getUsername() != null;
     }
@@ -82,7 +82,7 @@ public class ViraCube {
         }
     }
 
-    // Verbinden mit dem ViraCube erfolgt hier, hier wird der API-Key beantragt
+    // Verbinden mit dem Cube erfolgt hier, hier wird der API-Key beantragt
     public String link() throws IOException, ApiException {
         if (username != null) {
             throw new IllegalStateException("already linked");
@@ -104,7 +104,7 @@ public class ViraCube {
         }
     }
 
-    // Gibt eine Liste mit allen der Bridge/Viracube bekannten Circuits aus und deren vollständige Konfiguration
+    // Gibt eine Liste mit allen der Bridge/Cube bekannten Circuits aus und deren vollständige Konfiguration
     public List<Circuit> getCircuits() throws IOException, ApiException {
         requireAuthentication();
         Result result = http.post("http://" + ip + "/api/circuit/all?apiKey=" + username, "");

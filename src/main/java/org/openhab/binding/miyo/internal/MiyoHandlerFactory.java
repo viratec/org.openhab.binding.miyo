@@ -6,9 +6,9 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package org.openhab.binding.viratec.internal;
+package org.openhab.binding.miyo.internal;
 
-import static org.openhab.binding.viratec.ViraTecBindingConstants.CIRCUIT_ID;
+import static org.openhab.binding.miyo.MiyoBindingConstants.CIRCUIT_ID;
 
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -27,24 +27,24 @@ import org.eclipse.smarthome.core.thing.ThingUID;
 import org.eclipse.smarthome.core.thing.binding.BaseThingHandlerFactory;
 import org.eclipse.smarthome.core.thing.binding.ThingHandler;
 import org.eclipse.smarthome.core.thing.binding.ThingHandlerFactory;
-import org.openhab.binding.viratec.handler.ViraCubeHandler;
-import org.openhab.binding.viratec.handler.ViraTecHandler;
-import org.openhab.binding.viratec.internal.discovery.CircuitDiscoveryService;
+import org.openhab.binding.miyo.handler.CubeHandler;
+import org.openhab.binding.miyo.handler.MiyoHandler;
+import org.openhab.binding.miyo.internal.discovery.CircuitDiscoveryService;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.component.annotations.Component;
 
 /**
- * The {@link ViraTecHandlerFactory} is responsible for creating things and thing
+ * The {@link MiyoHandlerFactory} is responsible for creating things and thing
  * handlers.
  *
  *
  */
 @Component(service = ThingHandlerFactory.class, immediate = true, configurationPid = "binding.miyo")
 
-public class ViraTecHandlerFactory extends BaseThingHandlerFactory {
+public class MiyoHandlerFactory extends BaseThingHandlerFactory {
 
     public final static Set<ThingTypeUID> SUPPORTED_THING_TYPES = Stream
-            .concat(ViraCubeHandler.SUPPORTED_THING_TYPES.stream(), ViraTecHandler.SUPPORTED_THING_TYPES.stream())
+            .concat(CubeHandler.SUPPORTED_THING_TYPES.stream(), MiyoHandler.SUPPORTED_THING_TYPES.stream())
             .collect(Collectors.toSet());
 
     private final Map<ThingUID, @Nullable ServiceRegistration<?>> discoveryServiceRegs = new HashMap<>();
@@ -52,10 +52,10 @@ public class ViraTecHandlerFactory extends BaseThingHandlerFactory {
     @Override
     public @Nullable Thing createThing(ThingTypeUID thingTypeUID, Configuration configuration,
             @Nullable ThingUID thingUID, @Nullable ThingUID bridgeUID) {
-        if (ViraCubeHandler.SUPPORTED_THING_TYPES.contains(thingTypeUID)) {
+        if (CubeHandler.SUPPORTED_THING_TYPES.contains(thingTypeUID)) {
             return super.createThing(thingTypeUID, configuration, thingUID, null);
         }
-        if (ViraTecHandler.SUPPORTED_THING_TYPES.contains(thingTypeUID)) {
+        if (MiyoHandler.SUPPORTED_THING_TYPES.contains(thingTypeUID)) {
             ThingUID circuitUID = getCircuitUID(thingTypeUID, thingUID, configuration, bridgeUID);
             return super.createThing(thingTypeUID, configuration, circuitUID, bridgeUID);
         }
@@ -84,12 +84,12 @@ public class ViraTecHandlerFactory extends BaseThingHandlerFactory {
 
     @Override
     protected @Nullable ThingHandler createHandler(Thing thing) {
-        if (ViraCubeHandler.SUPPORTED_THING_TYPES.contains(thing.getThingTypeUID())) {
-            ViraCubeHandler handler = new ViraCubeHandler((Bridge) thing); // NEU
+        if (CubeHandler.SUPPORTED_THING_TYPES.contains(thing.getThingTypeUID())) {
+            CubeHandler handler = new CubeHandler((Bridge) thing); // NEU
             registerCircuitDiscoveryService(handler);
             return handler;
-        } else if (ViraTecHandler.SUPPORTED_THING_TYPES.contains(thing.getThingTypeUID())) {
-            return new ViraTecHandler(thing);
+        } else if (MiyoHandler.SUPPORTED_THING_TYPES.contains(thing.getThingTypeUID())) {
+            return new MiyoHandler(thing);
         } else {
             return null;
         }
@@ -97,7 +97,7 @@ public class ViraTecHandlerFactory extends BaseThingHandlerFactory {
 
     @Override
     protected synchronized void removeHandler(ThingHandler thingHandler) {
-        if (thingHandler instanceof ViraCubeHandler) {
+        if (thingHandler instanceof CubeHandler) {
             ServiceRegistration<?> serviceReg = this.discoveryServiceRegs.get(thingHandler.getThing().getUID());
             if (serviceReg != null) {
                 CircuitDiscoveryService discoveryService = (CircuitDiscoveryService) bundleContext
@@ -111,10 +111,10 @@ public class ViraTecHandlerFactory extends BaseThingHandlerFactory {
         }
     }
 
-    private synchronized void registerCircuitDiscoveryService(ViraCubeHandler viraCubeHandler) {
-        CircuitDiscoveryService discoveryService = new CircuitDiscoveryService(viraCubeHandler);
+    private synchronized void registerCircuitDiscoveryService(CubeHandler cubeHandler) {
+        CircuitDiscoveryService discoveryService = new CircuitDiscoveryService(cubeHandler);
         discoveryService.activate();
-        this.discoveryServiceRegs.put(viraCubeHandler.getThing().getUID(), bundleContext
+        this.discoveryServiceRegs.put(cubeHandler.getThing().getUID(), bundleContext
                 .registerService(DiscoveryService.class.getName(), discoveryService, new Hashtable<String, Object>()));
     }
 

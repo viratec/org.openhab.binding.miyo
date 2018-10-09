@@ -7,7 +7,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  */
 
-package org.openhab.binding.viratec.internal;
+package org.openhab.binding.miyo.internal;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -20,7 +20,7 @@ import org.apache.commons.io.IOUtils;
 
 /**
  *
- * {@link HttpClient} für Http Requests an den ViraCube
+ * {@link HttpClient} für Http Requests an den Cube
  *
  *
  *

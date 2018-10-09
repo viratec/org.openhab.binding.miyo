@@ -6,20 +6,21 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-
-package org.openhab.binding.viratec.internal.exceptions;
+package org.openhab.binding.miyo.internal.exceptions;
 
 /**
- * {@link APIException} Verbindung zu ViraCube schlaegt fehl
+ * {@link LinkButtonException} Exception, wenn der Button am Cube nicht gedrückt worden ist
  *
  *
  *
  */
-public class ApiException extends Exception {
-    public ApiException() {
+
+public class LinkButtonException extends ApiException {
+
+    public LinkButtonException() {
     }
 
-    public ApiException(String message) {
+    public LinkButtonException(String message) {
         super(message);
     }
 

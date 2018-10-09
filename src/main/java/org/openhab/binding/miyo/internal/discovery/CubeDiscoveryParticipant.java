@@ -2,9 +2,9 @@
  *
  *
  */
-package org.openhab.binding.viratec.internal.discovery;
+package org.openhab.binding.miyo.internal.discovery;
 
-import static org.openhab.binding.viratec.ViraTecBindingConstants.*;
+import static org.openhab.binding.miyo.MiyoBindingConstants.*;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -23,7 +23,7 @@ import org.jupnp.model.meta.RemoteDevice;
 import org.osgi.service.component.annotations.Component;
 
 /**
- * The {@link ViraCubeDiscoveryParticipant} is responsible for discovering new and removed cubes. It uses the central
+ * The {@link CubeDiscoveryParticipant} is responsible for discovering new and removed cubes. It uses the central
  * {@link UpnpDiscoveryService}.
  *
  *
@@ -34,7 +34,7 @@ import org.osgi.service.component.annotations.Component;
  */
 @Component(immediate = true, service = UpnpDiscoveryParticipant.class) // depricated but still in official eclipse
                                                                        // smarthome documentation for upnp discoveries
-public class ViraCubeDiscoveryParticipant implements UpnpDiscoveryParticipant {
+public class CubeDiscoveryParticipant implements UpnpDiscoveryParticipant {
 
     @Override
     public Set<ThingTypeUID> getSupportedThingTypeUIDs() {

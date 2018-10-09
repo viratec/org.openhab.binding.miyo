@@ -6,9 +6,9 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package org.openhab.binding.viratec.handler;
+package org.openhab.binding.miyo.handler;
 
-import static org.openhab.binding.viratec.ViraTecBindingConstants.*;
+import static org.openhab.binding.miyo.MiyoBindingConstants.*;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -35,26 +35,26 @@ import org.eclipse.smarthome.core.thing.ThingStatusDetail;
 import org.eclipse.smarthome.core.thing.ThingTypeUID;
 import org.eclipse.smarthome.core.thing.binding.ConfigStatusBridgeHandler;
 import org.eclipse.smarthome.core.types.Command;
-import org.openhab.binding.viratec.internal.Circuit;
-import org.openhab.binding.viratec.internal.State;
-import org.openhab.binding.viratec.internal.StateUpdate;
-import org.openhab.binding.viratec.internal.ViraCube;
-import org.openhab.binding.viratec.internal.ViraCubeConfigStatusMessage;
-import org.openhab.binding.viratec.internal.exceptions.ApiException;
-import org.openhab.binding.viratec.internal.exceptions.IrrigationException;
-import org.openhab.binding.viratec.internal.exceptions.LinkButtonException;
-import org.openhab.binding.viratec.internal.exceptions.UnauthorizedException;
+import org.openhab.binding.miyo.internal.Circuit;
+import org.openhab.binding.miyo.internal.State;
+import org.openhab.binding.miyo.internal.StateUpdate;
+import org.openhab.binding.miyo.internal.Cube;
+import org.openhab.binding.miyo.internal.CubeConfigStatusMessage;
+import org.openhab.binding.miyo.internal.exceptions.ApiException;
+import org.openhab.binding.miyo.internal.exceptions.IrrigationException;
+import org.openhab.binding.miyo.internal.exceptions.LinkButtonException;
+import org.openhab.binding.miyo.internal.exceptions.UnauthorizedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * {@link ViraCubeHandler} Handler für den ViraCube als Bridge
+ * {@link CubeHandler} Handler für den Cube als Bridge
  *
  *
  *
  */
 // @NonNullByDefault
-public class ViraCubeHandler extends ConfigStatusBridgeHandler {
+public class CubeHandler extends ConfigStatusBridgeHandler {
 
     private final String CIRCUIT_STATE_ADDED = "added";
 
@@ -66,9 +66,9 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
 
     public static final String DEVICE_TYPE = "EclipseSmartHome";
 
-    private final Logger logger = LoggerFactory.getLogger(ViraCube.class);
+    private final Logger logger = LoggerFactory.getLogger(Cube.class);
 
-    private boolean lastViraCubeConnectionState = false;
+    private boolean lastCubeConnectionState = false;
 
     private final Map<String, Circuit> lastCircuitStates = new ConcurrentHashMap<>();
 
@@ -76,19 +76,19 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
 
     private @Nullable ScheduledFuture<?> pollingJob;
 
-    private ViraCube viraCube = null;
+    private Cube cube = null;
 
     private final Runnable pollingRunnable = new Runnable() {
 
         @Override
         public void run() {
             try {
-                if (!lastViraCubeConnectionState) {
-                    lastViraCubeConnectionState = tryResumeBridgeConnection();
+                if (!lastCubeConnectionState) {
+                    lastCubeConnectionState = tryResumeBridgeConnection();
                 }
-                if (lastViraCubeConnectionState) {
+                if (lastCubeConnectionState) {
                     Map<String, Circuit> lastCircuitStateCopy = new HashMap<>(lastCircuitStates);
-                    for (final Circuit circuit : viraCube.getCircuits()) {
+                    for (final Circuit circuit : cube.getCircuits()) {
                         final String circuitId = circuit.getOpenhabId();
                         if (lastCircuitStateCopy.containsKey(circuitId)) {
                             final Circuit lastCircuit = lastCircuitStateCopy.remove(circuitId);
@@ -109,41 +109,41 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
                         logger.debug("Circuit {} removed.", circuitEntry.getKey());
                         for (CircuitStatusListener circuitStatusListener : circuitStatusListeners) {
                             try {
-                                circuitStatusListener.onCircuitRemoved(viraCube, circuitEntry.getValue());
+                                circuitStatusListener.onCircuitRemoved(cube, circuitEntry.getValue());
                             } catch (Exception e) {
-                                logger.error("An error ocurred while calling the ViraCubeHeartListener", e);
+                                logger.error("An error ocurred while calling the CubeHeartListener", e);
                             }
                         }
                     }
                 }
             } catch (UnauthorizedException | IllegalStateException e) {
-                if (isReachable(viraCube.getIp())) {
-                    lastViraCubeConnectionState = false;
+                if (isReachable(cube.getIp())) {
+                    lastCubeConnectionState = false;
                     onNotAuthenticated();
                 } else {
-                    if (lastViraCubeConnectionState || thing.getStatus() == ThingStatus.INITIALIZING) {
-                        lastViraCubeConnectionState = false;
+                    if (lastCubeConnectionState || thing.getStatus() == ThingStatus.INITIALIZING) {
+                        lastCubeConnectionState = false;
                         onConnectionLost();
                     }
                 }
             } catch (Exception e) {
-                if (viraCube != null) {
-                    if (lastViraCubeConnectionState) {
-                        logger.debug("Connection to the MIYOCube {} lost.", viraCube.getIp());
-                        lastViraCubeConnectionState = false;
+                if (cube != null) {
+                    if (lastCubeConnectionState) {
+                        logger.debug("Connection to the MIYOCube {} lost.", cube.getIp());
+                        lastCubeConnectionState = false;
                         onConnectionLost();
                     }
                 }
             }
 
-            if (!lastViraCubeConnectionState) {
+            if (!lastCubeConnectionState) {
                 onNotAuthenticated();
             }
         }
 
         private boolean isReachable(String ipAddress) {
             try {
-                viraCube.authenticate("invalid");
+                cube.authenticate("invalid");
             } catch (IOException e) {
                 return false;
             } catch (ApiException e) {
@@ -164,16 +164,16 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
     public void handleCommand(ChannelUID channelUID, Command command) {
     }
 
-    public ViraCubeHandler(Bridge cube) {
+    public CubeHandler(Bridge cube) {
         super(cube);
     }
 
     public void updateCircuitState(Circuit circuit, StateUpdate stateUpdate) throws IrrigationException {
-        if (viraCube != null) {
+        if (cube != null) {
             String mode = (stateUpdate.commands.get(0).key);
             if (mode.equals("mode")) {
                 try {
-                    viraCube.setIrrigation(circuit, stateUpdate);
+                    cube.setIrrigation(circuit, stateUpdate);
                 } catch (IOException e) {
                     updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.COMMUNICATION_ERROR, e.getMessage());
                 } catch (IrrigationException e) {
@@ -185,7 +185,7 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
                 }
             } else if (mode.equals("winter")) {
                 try {
-                    viraCube.setWinter(circuit, stateUpdate);
+                    cube.setWinter(circuit, stateUpdate);
                 } catch (IOException e) {
                     updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.COMMUNICATION_ERROR, e.getMessage());
                 } catch (ApiException e) {
@@ -197,7 +197,7 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
                 logger.warn("Command is not supported");
             }
         } else {
-            logger.warn("No ViraCube connected or selected. Cannot set Circuit State");
+            logger.warn("No Cube connected or selected. Cannot set Circuit State");
         }
 
     }
@@ -209,18 +209,18 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
             pollingJob.cancel(true);
             pollingJob = null;
         }
-        if (viraCube != null) {
-            viraCube = null;
+        if (cube != null) {
+            cube = null;
         }
     }
 
-    @Override // Der ViraCubeHandler wird initialisiert
+    @Override // Der CubeHandler wird initialisiert
     public void initialize() {
         logger.debug("Initializing MIYOcubeHandler");
         if (getConfig().get(HOST) != null) {
-            if (viraCube == null) {
-                viraCube = new ViraCube((String) getConfig().get(HOST));
-                viraCube.setTimeout(5000);
+            if (cube == null) {
+                cube = new Cube((String) getConfig().get(HOST));
+                cube.setTimeout(5000);
             }
             onUpdate();
         } else {
@@ -230,7 +230,7 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
     }
 
     private synchronized void onUpdate() {
-        if (viraCube != null) {
+        if (cube != null) {
             if (pollingJob == null || pollingJob.isCancelled()) {
                 int pollingInterval = DEFAULT_POLLING_INTERVAL;
                 try {
@@ -251,7 +251,7 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
         }
     }
 
-    // This method is called when ever the connection to the ViraCube is lost
+    // This method is called when ever the connection to the Cube is lost
     public void onConnectionLost() {
         logger.debug("Bridge conncetion lost. Updating thing status to offline");
         updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.NONE, "bridge-conncetion lost");
@@ -263,7 +263,7 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
     }
 
     private boolean tryResumeBridgeConnection() throws IOException, ApiException {
-        logger.debug("Connection to MIYOCube {} established", viraCube.getIp());
+        logger.debug("Connection to MIYOCube {} established", cube.getIp());
         if (getConfig().get(USER_NAME) == null) {
             logger.warn("User name for MIYOCube authentication not available in configuration.");
             updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.CONFIGURATION_ERROR, "conf-error-no-username");
@@ -277,14 +277,14 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
 
     public boolean onNotAuthenticated() {
         String username = (String) getConfig().get(USER_NAME);
-        if (viraCube == null) {
+        if (cube == null) {
             return false;
         }
         if (username == null) {
             createUser();
         } else {
             try {
-                viraCube.authenticate(username);
+                cube.authenticate(username);
                 return true;
             } catch (Exception e) {
                 handleAuthenticationFailure(e, username);
@@ -306,7 +306,7 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
 
     private String createUserOnPhysicalBridge() throws IOException, ApiException {
         logger.info("Creating new User on MIYOCube {} please press the button on the MIYOCube.", getConfig().get(HOST));
-        String username = viraCube.link();
+        String username = cube.link();
         return username;
     }
 
@@ -343,7 +343,7 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
         if (result) {
             onUpdate();
             for (Circuit circuit : lastCircuitStates.values()) {
-                csl.onCircuitAdded(viraCube, circuit);
+                csl.onCircuitAdded(cube, circuit);
             }
         }
         return result;
@@ -363,18 +363,18 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
 
     public List<Circuit> getCircuits() {
         List<Circuit> ret = withReAuthentication("Search for new Circuits", () -> {
-            return viraCube.getCircuits();
+            return cube.getCircuits();
         });
         return ret != null ? ret : Collections.emptyList();
     }
 
     private <T> T withReAuthentication(String taskDescription, Callable<T> runnable) {
-        if (viraCube != null) {
+        if (cube != null) {
             try {
                 try {
                     runnable.call();
                 } catch (UnauthorizedException | IllegalStateException e) {
-                    lastViraCubeConnectionState = false;
+                    lastCubeConnectionState = false;
                     if (onNotAuthenticated()) {
                         return runnable.call();
                     }
@@ -397,12 +397,12 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
             try {
                 switch (type) {
                     case CIRCUIT_STATE_ADDED:
-                        csl.onCircuitAdded(viraCube, circuit);
+                        csl.onCircuitAdded(cube, circuit);
                         logger.debug("Sending circuitAdded for circuit: {}", circuit.getOpenhabId());
                         break;
                     case CIRCUIT_STATE_CHANGED:
                         logger.debug("Sending circuitState changed for circuit: {}", circuit.getOpenhabId());
-                        csl.onCircuitStateChanged(viraCube, circuit);
+                        csl.onCircuitStateChanged(cube, circuit);
                         break;
                     default:
                         throw new IllegalArgumentException(
@@ -439,7 +439,7 @@ public class ViraCubeHandler extends ConfigStatusBridgeHandler {
 
         if (cubeIpAddress == null || cubeIpAddress.isEmpty()) {
             configStatusMessages = Collections.singletonList(ConfigStatusMessage.Builder.error(HOST)
-                    .withMessageKeySuffix(ViraCubeConfigStatusMessage.IP_ADDRESS_MISSING).withArguments(HOST).build());
+                    .withMessageKeySuffix(CubeConfigStatusMessage.IP_ADDRESS_MISSING).withArguments(HOST).build());
         } else {
             configStatusMessages = Collections.emptyList();
         }

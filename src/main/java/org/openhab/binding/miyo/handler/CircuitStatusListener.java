@@ -6,12 +6,12 @@
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  */
-package org.openhab.binding.viratec.handler;
+package org.openhab.binding.miyo.handler;
 
 import org.eclipse.jdt.annotation.NonNullByDefault;
 import org.eclipse.jdt.annotation.Nullable;
-import org.openhab.binding.viratec.internal.Circuit;
-import org.openhab.binding.viratec.internal.ViraCube;
+import org.openhab.binding.miyo.internal.Circuit;
+import org.openhab.binding.miyo.internal.Cube;
 
 /**
  *
@@ -21,10 +21,10 @@ import org.openhab.binding.viratec.internal.ViraCube;
 @NonNullByDefault
 public interface CircuitStatusListener {
 
-    void onCircuitStateChanged(@Nullable ViraCube viracube, Circuit circuit);
+    void onCircuitStateChanged(@Nullable Cube cube, Circuit circuit);
 
-    void onCircuitRemoved(@Nullable ViraCube viraCube, Circuit circuit);
+    void onCircuitRemoved(@Nullable Cube cube, Circuit circuit);
 
-    void onCircuitAdded(@Nullable ViraCube viraCube, Circuit circuit);
+    void onCircuitAdded(@Nullable Cube cube, Circuit circuit);
 
 }

@@ -7,15 +7,15 @@
  * http://www.eclipse.org/legal/epl-v10.html
  */
 
-package org.openhab.binding.viratec.internal;
+package org.openhab.binding.miyo.internal;
 
 /**
  *
  *
- * {@link ViraCubeConfigStatusMessage} Message falls die konfiguration niht klappt aufgrund falscher IP-Adresse
+ * {@link CubeConfigStatusMessage} Message falls die Konfiguration nicht klappt aufgrund falscher IP-Adresse
  */
 
-public interface ViraCubeConfigStatusMessage {
+public interface CubeConfigStatusMessage {
 
     final static String IP_ADDRESS_MISSING = "missing -ip-address-configuration";
 }
