@@ -2,14 +2,14 @@ Manifest-Version: 1.0
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
 Bundle-ManifestVersion: 2
-Bundle-Name: ViraTec Binding
+Bundle-Name: MIYO Binding
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-SymbolicName: org.openhab.binding.viratec;singleton:=true
+Bundle-SymbolicName: org.openhab.binding.miyo;singleton:=true
 Bundle-Vendor: openHAB
 Bundle-Version: 2.2.0.qualifier
 Export-Package: 
- org.openhab.binding.viratec,
- org.openhab.binding.viratec.handler
+ org.openhab.binding.miyo,
+ org.openhab.binding.miyo.handler
 Import-Package: 
  com.google.gson;version="2.5.0",
  com.google.gson.reflect;version="2.5.0",
@@ -32,8 +32,8 @@ Import-Package:
  org.joda.time.format,
  org.jupnp,
  org.jupnp.model.meta,
- org.openhab.binding.viratec,
- org.openhab.binding.viratec.handler,
+ org.openhab.binding.miyo,
+ org.openhab.binding.miyo.handler,
  org.osgi.framework;version="1.8.0",
  org.osgi.service.component.annotations;resolution:=optional,
  org.slf4j

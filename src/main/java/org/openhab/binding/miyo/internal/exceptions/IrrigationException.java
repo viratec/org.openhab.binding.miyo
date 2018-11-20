@@ -1,4 +1,4 @@
-package org.openhab.binding.viratec.internal.exceptions;
+package org.openhab.binding.miyo.internal.exceptions;
 
 public class IrrigationException extends ApiException {
 

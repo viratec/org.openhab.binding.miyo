@@ -7,7 +7,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  */
 
-package org.openhab.binding.viratec.internal.exceptions;
+package org.openhab.binding.miyo.internal.exceptions;
 
 /**
  *
